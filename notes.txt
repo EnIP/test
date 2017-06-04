@@ -1,6 +1,27 @@
-git checkout -b developer
-
+#show remote repositories
 git remote show origin
 
-git checkout -b release-1.2 develop
+#create a new branch called developer
+git checkout -b developer
+
+#create a new branch based on developer
+git checkout -b release-1.2 developer
+
+#merge with release-1.2
+git merge --no-ff release-1.2
+
+#tag a release
+git tag -a 1.2
+
+#delete branch
+ git branch -d release-1.2
+
+#setup kdiff3
+git config --global --add merge.tool kdiff3
+git config --global --add mergetool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"
+git config --global --add mergetool.kdiff3.trustExitCode false
+
+git config --global --add diff.guitool kdiff3
+git config --global --add difftool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"
+git config --global --add difftool.kdiff3.trustExitCode false
 
