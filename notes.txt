@@ -1,0 +1,6 @@
+git checkout -b developer
+
+git remote show origin
+
+git checkout -b release-1.2 develop
+
